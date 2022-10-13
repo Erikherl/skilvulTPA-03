@@ -94,18 +94,10 @@ main{
     color:red;
 }
 
-.overview{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color: #fff;
-    padding: 1rem;
-    max-height: 100%;
-    transform:translateY(101%);
-    transition:transform 0.3s ease-in;
+.date{
+    display:flex;
+    align-items:flex-end;
 }
-
-.movie:hover .overview{
-    transform:translateY(0)
+#date{
+    padding-left: 1.3vw;
 }
