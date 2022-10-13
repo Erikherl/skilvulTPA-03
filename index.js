@@ -12,16 +12,23 @@ getMovies(apiURL);
 function getMovies(url) {
     lastUrl = url;
     fetch(url).then(res => res.json()).then(data => {
-        console.log(data.results)
         showMovies(data.results);
     })
 }
 
 function showMovies(data) {
     main.innerHTML = '';
+    let nameMonth = new Array("Jan", "Feb", "Mar", 
+    "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+    "Oct", "Nov", "Dec");
 
     data.forEach(movie => {
         const {title, poster_path, vote_average, release_date} = movie;
+        const d = new Date(release_date)
+        let days = d.getDate();
+        let months = d.getMonth();
+        let years = d.getFullYear();
+        let date = nameMonth[months]+" "+days+", "+years
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = 
@@ -32,7 +39,7 @@ function showMovies(data) {
                 <span>${vote_average}</span>
             </div>
             <div class="date">
-                <p id="date">${release_date}</p>
+                <p id="date">${date}</p>
             </div>
             
         `

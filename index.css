@@ -78,25 +78,14 @@ main{
     background-color: var(--primary-color);
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
-    font-weight: bold;
-    color: gold;
-}
-
-.movie-info span.green{
-    color:lightgreen;
-}
-
-.movie-info span.orange{
-    color:orange;
-}
-
-.movie-info span.red{
-    color:red;
+    font-weight: bolder;
+    color: black;
 }
 
 .date{
     display:flex;
-    align-items:flex-end;
+    align-items: stretch;
+    align-content: flex-end;
 }
 #date{
     padding-left: 1.3vw;
