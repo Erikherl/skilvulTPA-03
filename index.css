@@ -1,8 +1,111 @@
-body{
+*{
     box-sizing: border-box;
 }
 
 nav{
     display:flex;
     justify-content: space-between;
+    padding-top: 2vh;
+    padding-left: 5.5vw;
+    padding-right: 5.5vw;
+    align-items: center;
+}
+#title-web{
+    color:red;
+    font-weight: bold;
+}
+
+header{
+    background-color: rgb(35, 35, 35);
+    height: 10vh;
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.search{
+    background-color: transparent;
+    border: 1px solid red;
+    padding:0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:red;
+    font-family: inherit;
+}
+
+.search:focus{
+    outline:0;
+    background-color: white;
+}
+
+.search::placeholder{
+    font-weight: bold;
+    color: red;
+}
+
+.movie {
+    width: 20vw;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color);
+    position:relative;
+    overflow: hidden;
+}
+
+
+.movie img{
+    width:100%
+}
+
+.movie-info{
+    color:#eee;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h5{
+    margin-top: 0;
+    color:black;
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    color: gold;
+}
+
+.movie-info span.green{
+    color:lightgreen;
+}
+
+.movie-info span.orange{
+    color:orange;
+}
+
+.movie-info span.red{
+    color:red;
+}
+
+.overview{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition:transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform:translateY(0)
 }
